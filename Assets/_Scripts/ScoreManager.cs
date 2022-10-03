@@ -5,26 +5,22 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
+    // public TextMeshProUGUI text;
+    int score;
 
-    private int score = 0;
     // Start is called before the first frame update
     void Awake()
     {
-        if (!instance)
+        if(instance == null)
         {
             instance = this;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeScore(int coinValue)
     {
-        
-    }
-
-    public void changeScore(int points)
-    {
-        score = score + points;
+        score += coinValue;
         Debug.Log(score);
+        // text.text = score.ToString();
     }
 }
