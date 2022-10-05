@@ -17,6 +17,8 @@ public class EditorManager : MonoBehaviour
     Vector3 mousePos;
     public GameObject prefab1;
     public GameObject prefab2;
+    // Enemy
+    public GameObject prefab3;
     GameObject item;
     public bool instantiated = false;
 
@@ -45,6 +47,8 @@ public class EditorManager : MonoBehaviour
 
         inputAction.Editor.AddItem1.performed += cntxt => AddItem(1);
         inputAction.Editor.AddItem2.performed += cntxt => AddItem(2);
+        // Enemy
+        inputAction.Editor.AddItem3.performed += cntxt => AddItem(3);
         inputAction.Editor.DropItem.performed += cntxt => DropItem();
                
         editorMode = false;
@@ -78,6 +82,10 @@ public class EditorManager : MonoBehaviour
                     SpikeBall spike2 = new SpikeBall(item, new YellowMat());
                     //Add the boxes to the list of objects waiting for something to happen
                     subject.AddObserver(spike2);
+                    break;
+                case 3:
+                    item = Instantiate(prefab3);
+                    // Creates a enemy on the game map
                     break;
                 default:
                     break;

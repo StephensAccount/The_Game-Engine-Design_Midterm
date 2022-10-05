@@ -2508,6 +2508,7 @@ MonoBehaviour:
   editorMode: 0
   prefab1: {fileID: 3228606085136598944, guid: 3216cc5b38015d74a804cf03c81f44e4, type: 3}
   prefab2: {fileID: 5710855544311544208, guid: 31ecd1fd18307be4e94a133144b9a54a, type: 3}
+  prefab3: {fileID: 919132149155446097, guid: f7ba2089ac85d5d40bad5bcc574e769a, type: 3}
   instantiated: 0
 --- !u!114 &1103108913
 MonoBehaviour:
